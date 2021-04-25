@@ -16,8 +16,8 @@ app.post("/", function (req, res) {
 	fetch('https://www.superheroapi.com/api.php/2540844492728712/search/' + name)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data.results[0]);
-			res.render("show", { data: data.results[0] });
+			console.log(data.results);
+			res.render("show", { data: data.results });
 		}
 		);
 });

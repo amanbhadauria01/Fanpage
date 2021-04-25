@@ -4,6 +4,14 @@
 	<title>Hello</title>
 </head>
 <body>
-	<img src=<%=data.image.url%>>
+	<%
+		let i;
+		for(i=0;i<data.length;i++){
+	%>
+		
+		<img src=<%=data[i].image.url%>>
+		<h3><%=data[i].name%></h3>
+		<br>
+	<%}%>
 </body>
 </html>
