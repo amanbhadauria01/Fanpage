@@ -2,16 +2,18 @@
 <html>
 <head>
 	<title>Hello</title>
+	<link rel="stylesheet" href="/stylesheets/show.css">
 </head>
 <body>
-	<%
-		let i;
-		for(i=0;i<data.length;i++){
-	%>
-		
-		<img src=<%=data[i].image.url%>>
-		<h3><%=data[i].name%></h3>
-		<br>
-	<%}%>
+	<div class = "main_div">
+		<div class = "centre_div" id = "centrediv">	
+				<%
+					let i;
+					for(i=0;i<data.length;i++){
+				%>
+					<img src=<%=data[i].image.url%>>
+				<%}%>
+	    </div>	
+	</div>
 </body>
 </html>
