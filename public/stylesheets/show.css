@@ -29,6 +29,11 @@
 
   background-image : url(5.jpg);
 }
+
+.ind{
+  text-align: center;
+}
+
 img{
   width:200px;
   height:auto;
