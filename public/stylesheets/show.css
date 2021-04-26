@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  color : white;
   /* box-sizing: border-box; */
 }
 
@@ -15,19 +16,23 @@
   display: grid;
   place-items: center;  
 }
-.centre_div{
+.maindiv{
   position : absolute;
   left : 0;
   top : 0;
   width : 100%;
   height : 100vh;
-  background : rgba(0,0,0,0.7);
+  background-image : url(5.jpg);
+  
 }
-.main_div {
+.maindiv2{
+  background : rgba(0,0,0,0.6);
+}
+.container {
+  padding-top : 5%;
   width: 100vw;
   height: 100vh;
-
-  background-image : url(5.jpg);
+  border-radius : 25px;
 }
 img{
   width:200px;
