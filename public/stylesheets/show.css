@@ -5,7 +5,8 @@
 }
 
 body{
-  background : rgba(0,0,0);
+  /* background-image: url("https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500https://images.pexels.com/photos/2911521/pexels-photo-2911521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");*/
+  background : rgba(0,0,0,0.8); 
 }
 
 .maindiv{
@@ -16,10 +17,10 @@ body{
   /*height : 100vh;*/
   /* background-image : url(5.jpg); */
 }
-
+/* 
 .maindiv2{
-  background : rgba(0,0,0);
-}
+  /* background : rgba(0,0,0); 
+} */
 .container {
   padding-top : 5%;
   width: 100vw;
@@ -29,4 +30,23 @@ body{
 img{
   width:200px;
   height:500px;
+  border-radius : 25px !important;  
+}
+img:hover{
+  /*width:300px;
+  height: 600px;*/ 
+  filter: brightness(75%);
+}
+.card{
+  border-style:solid ;
+}
+.card-body{
+  text-align: center;
+}
+@media only screen and (min-width : 1200px) {
+  .container { max-width: 1600px; }
+}
+h1{
+  text-align: center;
+  font-size: 4rem;
 }
