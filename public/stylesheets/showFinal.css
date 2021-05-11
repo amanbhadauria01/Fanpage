@@ -1,4 +1,24 @@
 img{
-    height:30rem;
-    width: 30rem !important;
+    height:20rem;
+    width: 20rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.container{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+h4{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
 }
