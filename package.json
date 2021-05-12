@@ -11,6 +11,7 @@
     "mysql": "^2.18.1",
     "node-fetch": "^2.6.1",
     "npm": "^7.11.1",
+    "sql": "^0.78.0",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {},
