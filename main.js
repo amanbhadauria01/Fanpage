@@ -3,6 +3,18 @@ let app = express();
 let bodyparser = require("body-parser");
 let methodOverride = require("method-override");
 const showroute = require('./routes/showroute');
+let mysql=require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "Anurag168",
+  password: "CollabProject"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
 
 app.use(express.static(__dirname+"/public"));
 app.use(bodyparser.urlencoded({ extended: true }));
