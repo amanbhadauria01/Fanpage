@@ -3,13 +3,15 @@ let app = express();
 let bodyparser = require("body-parser");
 let methodOverride = require("method-override");
 const showroute = require('./routes/showroute');
-let mysql=require('mysql');
+
 var ejs = require('ejs');
 
-// var con = mysql.createConnection({
+// let con = mysql.createConnection({
+// //   connectionLimit: 50,
 //   host: "localhost",
-//   user: "Anurag168",
-//   password: "CollabProject"
+//   user: "root",
+//   password: "",
+//   database: "MyDb"
 // });
 
 // con.connect(function(err) {
