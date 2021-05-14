@@ -45,4 +45,16 @@ route.get('/:id',function(req,res){
 		);
 });
 
+route.get('/:id/newComment',function(req,res){
+	res.render("AddComment", {id: req.params.id});
+});
+
+route.post('/:id/newComment',function(req,res){
+	con.query("insert into Comment(User,Hero_id,Val) values('"+req.body.name+"',"+req.params.id+",'"+req.body.comment+"')",(err,results,fields)=>{
+		if(err)
+			console.log(err);
+	})
+	res.redirect("/show/"+req.params.id);
+});
+
 module.exports = route
