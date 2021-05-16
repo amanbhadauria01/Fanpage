@@ -28,7 +28,7 @@ app.get("/", function (req, res) {
 
 app.use("/show", showroute);
 
-let port = 3000;
+let port = 3000||process.env.port;
 app.listen(port, function () {
 	console.log("Server has Started");
 });
