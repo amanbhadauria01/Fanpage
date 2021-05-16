@@ -4,10 +4,10 @@ let mysql=require('mysql');
 
 let con = mysql.createConnection({
 	//   connectionLimit: 50,
-	  host: "localhost",
-	  user: "root",
-	  password: "",
-	  database: "MyDb"
+	  host: "sql6.freesqldatabase.com",
+	  user: "sql6412745",
+	  password: "GQkc1HvdPT",
+	  database: "sql6412745"
 	});
 	
 	con.connect(function(err) {
