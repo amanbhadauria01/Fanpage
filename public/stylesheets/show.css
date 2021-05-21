@@ -1,56 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  color : white;
-}
-
-body{
-  /* background-image: url("https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500https://images.pexels.com/photos/2911521/pexels-photo-2911521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");*/
-  background : rgba(0,0,0,0.8); 
-}
-
-.maindiv{
-  position : absolute;
-  left : 0;
-  top : 0;
-  width : 100%;
-  /*height : 100vh;*/
-  /* background-image : url(5.jpg); */
-}
-/* 
-.maindiv2{
-  /* background : rgba(0,0,0); 
-} */
-.container-fluid {
-  padding-top : 5%;
-  /* width: 100vw;
-  height: 100vh; */
-  border-radius : 25px;
-  align-items: center;
-  justify-content: center;
-  padding-left:5rem;
-  padding-right:5rem;
-}
-img{
-  width:25rem;
-  height:35rem;
-  border-radius : 25px !important;  
-}
-img:hover{
-  /*width:300px;
-  height: 600px;*/ 
-  filter: brightness(75%);
-}
-.card{
-  border-style:solid ;
-}
-.card-body{
-  text-align: center;
-}
-/* @media only screen and (min-width : 1200px) {
-  .container { max-width: 1600px; } 
-}*/
-h1{
-  text-align: center;
-  font-size: 4rem;
+.heroimage{
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;   
 }
