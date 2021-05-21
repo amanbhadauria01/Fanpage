@@ -1,73 +1,80 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Final Page</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <link rel="stylesheet" href="/stylesheets/showFinal.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <img src="<%=data.image.url%>">
-                <h2><%=data.name%></h2>
-                <hr>
-                <h4>Powerstats</h2>
-                <ul>
-                    <li>Intelligence: <%=data.powerstats.intelligence%></li>
-                    <li>Strength: <%=data.powerstats.strength%></li>
-                    <li>Speed: <%=data.powerstats.speed%></li>
-                    <li>Durability: <%=data.powerstats.durability%></li>
-                    <li>Power: <%=data.powerstats.power%></li>
-                    <li>Combat: <%=data.powerstats.combat%></li>
-                </ul>
-                <h4>Biography</h4>
-                <ul>
-                    <li>Full Name: <%=data.biography["full-name"]%></li>
-                    <li>Alter Egos: <%=data.biography["alter-egos"]%></li>
-                    <li>Aliases: <%for(let i=0;i<data.biography.aliases.length;i++){%>
-                        <%=data.biography.aliases[i]%>, <%}if(data.biography.aliases.length>0){%>
-                            <%=data.biography.aliases[data.biography.aliases.length-1]%>
-                        <%}%> </li>
-                    <li>Place of Birth: <%=data.biography["place-of-birth"]%></li>
-                    <li>First Appearance: <%=data.biography["first-appearance"]%></li>
-                    <li>Publisher: <%=data.biography.publisher%></li>
-                    <li>Alignment: <%=data.biography.alignment%></li>
-                </ul>
-                <h4>Appearance</h4>
-                <ul>
-                    <li>Gender: <%=data.appearance.gender%></li>
-                    <li>Race: <%=data.appearance.race%></li>
-                    <li>Height: <%=data.appearance.height[0]%></li>
-                    <li>Weight: <%=data.appearance.weight[0]%></li>
-                    <li>Eye Color: <%=data.appearance["eye-color"]%></li>
-                    <li>Hair Color: <%=data.appearance["hair-color"]%></li>
-                </ul>
-                <h4>Work</h4>
-                <ul>
-                    <li>Occupation: <%=data.work.occupation%></li>
-                    <li>Base: <%=data.work.base%></li>
-                </ul>
-                <h4>Connections</h4>
-                <ul>
-                    <li>Group Affiliation: <%=data.connections["group-affiliation"]%></li>
-                    <li>Relatives: <%=data.connections.relatives%></li>
-                </ul>
-            </div>
-            
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">	<link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>FANPAGE</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="container">
+        <div class="row">
+            <img src="<%=data.image.url%>">
+            <h2><%=data.name%></h2>
+            <hr>
+            <h4>Powerstats</h2>
+            <ul>
+                <li>Intelligence: <%=data.powerstats.intelligence%></li>
+                <li>Strength: <%=data.powerstats.strength%></li>
+                <li>Speed: <%=data.powerstats.speed%></li>
+                <li>Durability: <%=data.powerstats.durability%></li>
+                <li>Power: <%=data.powerstats.power%></li>
+                <li>Combat: <%=data.powerstats.combat%></li>
+            </ul>
+            <h4>Biography</h4>
+            <ul>
+                <li>Full Name: <%=data.biography["full-name"]%></li>
+                <li>Alter Egos: <%=data.biography["alter-egos"]%></li>
+                <li>Aliases: <%for(let i=0;i<data.biography.aliases.length;i++){%>
+                    <%=data.biography.aliases[i]%>, <%}if(data.biography.aliases.length>0){%>
+                        <%=data.biography.aliases[data.biography.aliases.length-1]%>
+                    <%}%> </li>
+                <li>Place of Birth: <%=data.biography["place-of-birth"]%></li>
+                <li>First Appearance: <%=data.biography["first-appearance"]%></li>
+                <li>Publisher: <%=data.biography.publisher%></li>
+                <li>Alignment: <%=data.biography.alignment%></li>
+            </ul>
+            <h4>Appearance</h4>
+            <ul>
+                <li>Gender: <%=data.appearance.gender%></li>
+                <li>Race: <%=data.appearance.race%></li>
+                <li>Height: <%=data.appearance.height[0]%></li>
+                <li>Weight: <%=data.appearance.weight[0]%></li>
+                <li>Eye Color: <%=data.appearance["eye-color"]%></li>
+                <li>Hair Color: <%=data.appearance["hair-color"]%></li>
+            </ul>
+            <h4>Work</h4>
+            <ul>
+                <li>Occupation: <%=data.work.occupation%></li>
+                <li>Base: <%=data.work.base%></li>
+            </ul>
+            <h4>Connections</h4>
+            <ul>
+                <li>Group Affiliation: <%=data.connections["group-affiliation"]%></li>
+                <li>Relatives: <%=data.connections.relatives%></li>
+            </ul>
+        </div>
+        
+        <div>
+            <a type="button" href="/show/<%=data.id%>/newComment" class="btn btn-primary">Add Comment</a>
             <div>
-                <a type="button" href="/show/<%=data.id%>/newComment" class="btn btn-primary">Add Comment</a>
-                <div>
-                    <%for(let i=0;i<Qvalue.length;i++){%>
-                        <strong><%=Qvalue[i].User%></strong>
-                        <br>
-                        <div>
-                            <%=Qvalue[i].Val%>
-                        </div>
-                    <%}%>
-                </div>
+                <%for(let i=0;i<Qvalue.length;i++){%>
+                    <strong><%=Qvalue[i].name%></strong>
+                    <br>
+                    <div>
+                        <%=Qvalue[i].Val%>
+                    </div>
+                <%}%>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    </body>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
 </html>
+

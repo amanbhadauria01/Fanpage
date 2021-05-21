@@ -33,7 +33,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.set("view engine", "ejs");
 app.use('/',require('./routes/pages.js'));
-app.use("/show", showroute);
 app.use('/auth',require('./routes/auth.js'));
 
 let port = 3000||process.env.port;
