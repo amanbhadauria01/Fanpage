@@ -18,11 +18,11 @@ router.get('/', authController.isLoggedIn, (req, res) => {
     });
 })
 
-router.get('/register', (req, res) => {
+router.get('/register',(req, res) => {
     res.render('register');
 })
 
-router.get('/login', (req, res) => {
+router.get('/login',(req, res) => {
     res.render('login');
 })
 
@@ -31,30 +31,22 @@ router.get('/profile', authController.isLoggedIn, (req, res) => {
         res.render('profile', {
             user: req.user
         });
-    } else {
+    }else{
         res.redirect('/login');
     }
 })
 
-// router.use('/show',authController.isLoggedIn,(req,res)=>{
-//     if(req.user){
-//         res.redirect('./showroute.js');
-//     }else{
-
-//     }
-// })
-
-router.post('/show',(req, res) => {
+router.post('/show',authController.isLoggedIn,(req, res) => {
     let name = req.body.name;
     fetch('https://www.superheroapi.com/api.php/2540844492728712/search/' + name)
         .then(response => response.json())
         .then(data => {
             console.log(data.results);
-            res.render("show", { data: data.results });
+            res.render("show", { data: data.results , user : req.user});
         }
     );
 })
-router.get('/show/:id',(req,res)=>{
+router.get('/show/:id',authController.isLoggedIn,(req,res)=>{
     fetch('https://www.superheroapi.com/api.php/2540844492728712/' + req.params.id)
         .then(response => response.json())
         .then(data => {
@@ -62,7 +54,7 @@ router.get('/show/:id',(req,res)=>{
                 if(err)
                     console.log(err);
                 else
-                res.render("showFinal", { data: data, Qvalue: results });
+                res.render("showFinal", { data: data, Qvalue: results, user : req.user,id : req.params.id });
             })
             
         }
@@ -71,13 +63,13 @@ router.get('/show/:id',(req,res)=>{
 
 router.get('/show/:id/newComment',authController.isLoggedIn,(req,res)=>{
     if(req.user){
-        res.render("AddComment", {id: req.params.id});
+        res.render("AddComment", {id: req.params.id, user : req.user});
     }else{
         res.redirect('/login');
     }
 })
 
-router.post('/show/:id/newComment',authController.isLoggedIn,async(req,res)=>{
+router.post('/show/:id/newComment',authController.isLoggedIn,(req,res)=>{
     if(req.user){
         db.query("INSERT INTO Comment(id,Hero_id,Val) VALUES('"+req.user.id+"',"+req.params.id+",'"+req.body.comment+"')",(err,results,fields)=>{
             if(err)
