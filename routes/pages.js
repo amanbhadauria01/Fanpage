@@ -3,6 +3,7 @@ const router = express.Router();
 const authController = require('../controllers/auth.js');
 const fetch = require("node-fetch");
 const mysql = require('mysql');
+const methodOverride = require("method-override");
 
 const db = mysql.createConnection({
     host     : process.env.DATABASE_HOST,
