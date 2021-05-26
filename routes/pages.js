@@ -80,11 +80,22 @@ router.post('/showFinal/:id/newComment',authController.isLoggedIn,(req,res)=>{
             if(err)
                 console.log(err);
         })
-        res.redirect("/show/"+req.params.id);
+        res.redirect("/showFinal/"+req.params.id);
     }else{
         res.redirect('/login');
     }
 })
 
+router.post('/showFinal/:id/:C_id',authController.isLoggedIn,(req,res)=>{
+    if(req.user){
+        db.query("DELETE FROM Comment WHERE C_id="+req.params.C_id,(err,results,fields)=>{
+            if(err)
+                console.log(err);
+        })
+        res.redirect("/showFinal/"+req.params.id);
+    }else{
+        res.redirect('/login');
+    }
+})
 
 module.exports = router;

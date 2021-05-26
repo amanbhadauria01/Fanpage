@@ -69,6 +69,13 @@
                             <p>
                                 <%=Qvalue[i].Val%>
                             </p>
+                            <%if(user && user.id===Qvalue[i].id){%>
+                                <form action="/showFinal/<%=id%>/<%=Qvalue[i].C_id%>" method="POST">
+                                    <button class="btn btn-sm btn-danger">
+                                        Delete
+                                    </button>
+                                </form>
+                            <%}%>
                             <hr>
                         </div>
                     </div>
