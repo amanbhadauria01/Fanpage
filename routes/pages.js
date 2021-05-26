@@ -36,9 +36,8 @@ router.get('/profile', authController.isLoggedIn, (req, res) => {
     }
 })
 
-router.post('/show',authController.isLoggedIn,(req, res) => {
-    let name = req.body.name;
-    fetch('https://www.superheroapi.com/api.php/2540844492728712/search/' + name)
+router.get('/show/:search',authController.isLoggedIn,(req,res)=>{
+    fetch('https://www.superheroapi.com/api.php/2540844492728712/search/' + req.params.search)
         .then(response => response.json())
         .then(data => {
             console.log(data.results);
@@ -46,7 +45,13 @@ router.post('/show',authController.isLoggedIn,(req, res) => {
         }
     );
 })
-router.get('/show/:id',authController.isLoggedIn,(req,res)=>{
+
+router.post('/show',authController.isLoggedIn,(req, res) => {
+    let name = req.body.name;
+    res.redirect('/show/'+name);
+    
+})
+router.get('/showFinal/:id',authController.isLoggedIn,(req,res)=>{
     fetch('https://www.superheroapi.com/api.php/2540844492728712/' + req.params.id)
         .then(response => response.json())
         .then(data => {
@@ -61,7 +66,7 @@ router.get('/show/:id',authController.isLoggedIn,(req,res)=>{
     );        
 })
 
-router.get('/show/:id/newComment',authController.isLoggedIn,(req,res)=>{
+router.get('/showFinal/:id/newComment',authController.isLoggedIn,(req,res)=>{
     if(req.user){
         res.render("AddComment", {id: req.params.id, user : req.user});
     }else{
@@ -69,7 +74,7 @@ router.get('/show/:id/newComment',authController.isLoggedIn,(req,res)=>{
     }
 })
 
-router.post('/show/:id/newComment',authController.isLoggedIn,(req,res)=>{
+router.post('/showFinal/:id/newComment',authController.isLoggedIn,(req,res)=>{
     if(req.user){
         db.query("INSERT INTO Comment(id,Hero_id,Val) VALUES('"+req.user.id+"',"+req.params.id+",'"+req.body.comment+"')",(err,results,fields)=>{
             if(err)
