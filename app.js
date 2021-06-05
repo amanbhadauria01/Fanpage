@@ -8,7 +8,7 @@ const bodyparser = require("body-parser");
 const methodOverride = require("method-override");
 const showroute = require('./routes/showroute');
 const ejs = require('ejs');
-dotenv.config({path : './.env'});
+dotenv.config({path : './.gitignore/.env'});
 
 
 const db = mysql.createConnection({
