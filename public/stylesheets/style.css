@@ -33,3 +33,7 @@ a{
 .unselected{
     display: none !important;
 }
+
+.lbutton{
+    margin-right: 2rem;
+}

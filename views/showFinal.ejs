@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>FANPAGE</title>
+    
 </head>
 <body>
     <%- include('partials/header') %>
@@ -71,13 +72,18 @@
                             <p>
                                 <%=Qvalue[i].Val%>
                             </p>
-                            <span class="material-icons-outlined lbutton">
+                            <script type="text/javascript">
+                                function init(){
+                                    console.log("Clicked");
+                                }
+                            </script>
+                            <button onclick="<%=init()%>" class="material-icons-outlined lbutton" >
                                 thumb_up
-                            </span>
+                            </button>
                             <span class="material-icons unselected lbutton">
                                 thumb_up
                             </span>
-                            <span class="material-icons-outlined lbutton">
+                            <span class="material-icons-outlined lbutton" onclick="location.href='https://www.cricbuzz.com/'">
                                 thumb_down
                             </span>
                             <span class="material-icons unselected lbutton">
@@ -103,9 +109,9 @@
     </div>
     <br>
     <br>
+    
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- <script src="EventListeners.js"></script> -->
 </body>
 </html>
 
