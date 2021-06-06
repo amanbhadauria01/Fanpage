@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">	<link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>FANPAGE</title>
 </head>
 <body>
@@ -69,6 +71,18 @@
                             <p>
                                 <%=Qvalue[i].Val%>
                             </p>
+                            <span class="material-icons-outlined lbutton">
+                                thumb_up
+                            </span>
+                            <span class="material-icons unselected lbutton">
+                                thumb_up
+                            </span>
+                            <span class="material-icons-outlined lbutton">
+                                thumb_down
+                            </span>
+                            <span class="material-icons unselected lbutton">
+                                thumb_down
+                            </span>
                             <%if(user && user.id===Qvalue[i].id){%>
                                 <form action="/showFinal/<%=id%>/<%=Qvalue[i].C_id%>?_method=DELETE" method="POST">
                                     <button class="btn btn-sm btn-danger">
@@ -91,6 +105,7 @@
     <br>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <script src="EventListeners.js"></script> -->
 </body>
 </html>
 
