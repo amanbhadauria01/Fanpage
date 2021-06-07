@@ -72,23 +72,18 @@
                             <p>
                                 <%=Qvalue[i].Val%>
                             </p>
-                            <script type="text/javascript">
-                                function init(){
-                                    console.log("Clicked");
-                                }
-                            </script>
-                            <button onclick="<%=init()%>" class="material-icons-outlined lbutton" >
+                            <button class="material-icons-outlined lbutton" >
                                 thumb_up
                             </button>
-                            <span class="material-icons unselected lbutton">
+                            <button class="material-icons unselected lbutton">
                                 thumb_up
-                            </span>
-                            <span class="material-icons-outlined lbutton" onclick="location.href='https://www.cricbuzz.com/'">
+                            </button>
+                            <button class="material-icons-outlined lbutton" >
                                 thumb_down
-                            </span>
-                            <span class="material-icons unselected lbutton">
+                            </button>
+                            <button class="material-icons unselected lbutton">
                                 thumb_down
-                            </span>
+                            </button>
                             <%if(user && user.id===Qvalue[i].id){%>
                                 <form action="/showFinal/<%=id%>/<%=Qvalue[i].C_id%>?_method=DELETE" method="POST">
                                     <button class="btn btn-sm btn-danger">
@@ -110,6 +105,7 @@
     <br>
     <br>
     
+    <script src="/stylesheets/EventListeners.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
