@@ -57,7 +57,7 @@ router.get('/showFinal/:id',authController.isLoggedIn,(req,res)=>{
     fetch('https://www.superheroapi.com/api.php/2540844492728712/' + req.params.id)
         .then(response => response.json())
         .then(data => {
-            db.query("select * from Comment INNER JOIN users ON Comment.id = users.id where Comment.Hero_id="+req.params.id,(err,results,fields)=>{
+            db.query("select *,TIMESTAMPDIFF(day,CURRENT_TIMESTAMP,Entry_date) as days_ago from Comment INNER JOIN users ON Comment.id = users.id where Comment.Hero_id="+req.params.id,(err,results,fields)=>{
                 if(err)
                     console.log(err);
                 else
