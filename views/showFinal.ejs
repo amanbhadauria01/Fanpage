@@ -72,18 +72,6 @@
                             <p>
                                 <%=Qvalue[i].Val%>
                             </p>
-                            <button class="material-icons-outlined lbutton" >
-                                thumb_up
-                            </button>
-                            <button class="material-icons unselected lbutton">
-                                thumb_up
-                            </button>
-                            <button class="material-icons-outlined lbutton" >
-                                thumb_down
-                            </button>
-                            <button class="material-icons unselected lbutton">
-                                thumb_down
-                            </button>
                             <%if(user && user.id===Qvalue[i].id){%>
                                 <form action="/showFinal/<%=id%>/<%=Qvalue[i].C_id%>?_method=DELETE" method="POST">
                                     <button class="btn btn-sm btn-danger">
