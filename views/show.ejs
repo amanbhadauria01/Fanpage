@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello</title>
+	<title>Fanpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">   	
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">	<link rel="stylesheet" href="/stylesheets/style.css">
 	<link rel="stylesheet" href="/stylesheets/style.css">
@@ -9,7 +12,7 @@
 </head>
 <body>
 	<%- include('partials/header') %>
-	<h1>Superheroes Matching your Search result are</h1>
+	<%if(data!=undefined){%><h1>Superheroes Matching your Search result are</h1><%}%> 
 	<hr>
 	<div class="container">
 		<div class="row">
@@ -18,16 +21,15 @@
 					%> 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-12 mt-5">
 							<div class="thumbnail">
-								  <div> 
+								  <div class = "imgcontainer"> 
 										<img onclick="location.href='/showFinal/<%=data[i].id%>';" src=<%=data[i].image.url%> class="heroimage">
 										<!-- <div class="card-body">
 											<h5 class="card-title"><%=data[i].name%></h5>
 											<p class="card-text"><%=data[i].biography['full-name']%></p>
 										</div> -->
 										<div class="caption-full">
-											<h4 class="pull-right"><%=data[i].name%></h4>
-											<br>
-											<h5 class="pull-right"><%=data[i].biography['full-name']%></h5>
+											<h4 class = "pull-left"><%=data[i].name%></h4>
+											<h5><%=data[i].biography['full-name']%></h5>
 										</div>
 								  </div>	
 						    </div>

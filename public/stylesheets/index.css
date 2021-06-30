@@ -1,13 +1,19 @@
 body{
     background-size : cover;    
     background-position: center;
-    font-family: 'Lato';
+    font-family: 'Bangers', cursive ;
     color : white; 
     animation : animate 16s ease-in-out infinite;
 }
 body, html {
  height: 100%;
 }
+
+.btn{
+    transform : scale(0.95);
+    opacity : 0.95;
+}
+
 .content{
     text-align: center;
     padding-top: 20%;
@@ -18,6 +24,9 @@ body, html {
 }
 .inputtext{
     color : black;
+    transform : scale(1.2);
+    margin : 20px;
+    opacity : 0.95;
 }
 h1{
     font-weight: 700;

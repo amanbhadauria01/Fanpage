@@ -1,0 +1,30 @@
+#notbody{
+    font-family: "Times New Roman", Times, serif ;
+    font-size: 25px;
+}
+
+#profilephoto{
+    border-style: solid;
+}
+
+h1{
+    font-weight: bold;
+}
+.thumbnail{
+    padding : 1px;
+}
+
+.card-title{
+    font-weight : bold;
+    font-size : 25px;
+}
+
+.avatar-ctn{
+    background-color : orange;
+    text-align : center;
+}
+.avatar{
+    width : 100%;
+    height : 100%;
+    border-bottom : 1px solid rgba(0,0,0,0.125);
+} 

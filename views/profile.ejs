@@ -4,39 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">       
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">	<link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
     <title>FANPAGE</title>
 </head>
 <body>
     <%- include('partials/header') %>
-    <div class="container mt-4">
+    <div class="container mt-4" id="notbody">
         <div class="row">
-            <div class="col-4">
+            <div class="col-md-4 thumbnail" id = "profilephoto">
                <div class="card text-center">
                    <div class="avatar-ctn">
                        <img src = "/stylesheets/avatar.png" class="avatar" alt="user profile pic"/>
                    </div>
                    <div class="card body">
-                       <h5 class="card-title mt-1"><%=user.name%></h5>
-                       <p class="card-text">Some quick example text to show </p>
-                       <a href="#" class = "btn btn-primary"><%=user.email%></a>
+                       <h5 class="card-title"><%=user.name%></h5>
+                       <p><%=user.email%></p>
                    </div>
                </div>
             </div>
-            <div class="col-8">
+            <div class="col-md-8">
                 <div class="card text-center">
                     <div class="card-header">
-                        Profile Page  
+                        <h1>User Profile</h1> 
+                        <hr> 
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Hey <%=user.name%> welcome back</h5>
-                        <p class="card-text">This is your profile page where you can add all the information about yourself</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Node Mysql Project
+                        <p>Hey <%=user.name%> , Welcome back !</p>
+                        <a href="/" class="btn btn-default">SEARCH HEROES</a>
                     </div>
                 </div>
             </div>
