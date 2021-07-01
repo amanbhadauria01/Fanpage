@@ -18,6 +18,8 @@ const db = mysql.createConnection({
     database : process.env.DATABASE
 });
 
+db.on('error', error =>  console.log(error));
+
 db.connect((err)=>{
     if(err){
         console.log(err);
@@ -25,6 +27,12 @@ db.connect((err)=>{
         console.log('Mysql connected');
     }
 })
+
+module.exports = (connectParams, onError) => {
+    const connection = mysql.createConnection(connectParams);
+    connection.on('error', onError);
+    return connection;
+ }
 
 
 app.use(express.static(__dirname+"/public"));
