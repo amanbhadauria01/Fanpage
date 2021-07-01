@@ -35,7 +35,7 @@ app.set("view engine", "ejs");
 app.use('/',require('./routes/pages.js'));
 app.use('/auth',require('./routes/auth.js'));
 
-let port = process.env.port;
+let port = process.env.PORT || 3000;
 app.listen(port, function () {
 	console.log("Server has Started");
 });
