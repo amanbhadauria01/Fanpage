@@ -38,6 +38,21 @@ router.get('/profile', authController.isLoggedIn, (req, res) => {
     }
 })
 
+router.get('/contact',authController.isLoggedIn,  (req, res) => {
+    if(req.user)res.render('contact', {
+        user: req.user
+    });
+    else  res.render('about');
+})
+
+router.get('/about',authController.isLoggedIn,  (req, res) => {
+    if(req.user)res.render('about', {
+        user: req.user
+    });
+    else  res.render('about');
+})
+
+
 router.get('/show/:search',authController.isLoggedIn,(req,res)=>{
     fetch('https://www.superheroapi.com/api.php/2540844492728712/search/' + req.params.search)
         .then(response => response.json())
