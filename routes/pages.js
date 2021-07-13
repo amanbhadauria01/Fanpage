@@ -42,7 +42,7 @@ router.get('/contact',authController.isLoggedIn,  (req, res) => {
     if(req.user)res.render('contact', {
         user: req.user
     });
-    else  res.render('about');
+    else  res.render('contact');
 })
 
 router.get('/about',authController.isLoggedIn,  (req, res) => {
