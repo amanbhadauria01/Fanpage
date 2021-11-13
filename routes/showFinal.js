@@ -17,7 +17,7 @@ router.get('/:Hero_id',authController.isLoggedIn,(req,res)=>{
     fetch('https://www.superheroapi.com/api.php/2540844492728712/' + req.params.Hero_id)
         .then(response => response.json())
         .then(data => {
-            db.query("select *,TIMESTAMPDIFF(MINUTE,CURRENT_TIMESTAMP,Entry_date) as minutes_ago from Comment INNER JOIN users ON Comment.id = users.id where Comment.Hero_id="+req.params.Hero_id,(err,results,fields)=>{
+            db.query("SELECT *,TIMESTAMPDIFF(MINUTE,CURRENT_TIMESTAMP,Entry_date) AS minutes_ago FROM Comment INNER JOIN users ON Comment.id = users.id WHERE Comment.Hero_id="+req.params.Hero_id+" ORDER BY minutes_ago DESC",(err,results,fields)=>{
                 if(err)
                     console.log(err);
                 else
