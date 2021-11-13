@@ -60,7 +60,7 @@ router.post('/:Hero_id/deleteComment/:C_id',authController.isLoggedIn,(req,res)=
                 if(err)
                     console.log(err);
             })
-            res.redirect("/showFinal/"+req.params.id);
+            res.redirect('/showFinal/'+req.params.Hero_id);
         }
         deletecomment();
     }else{
