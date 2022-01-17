@@ -13,8 +13,8 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
  Structure of JWT
     - A JSON Web Token consists of 3 parts separated by a period.
     - header.payload.signature
-    - Header 
+    ### Header 
        JWT header consists of token type and algorithm used for signing and encoding. Algorithms can be HMAC, SHA256, RSA, HS256 or     RS256.
-    - Payload   
+    ### Payload   
 
 
