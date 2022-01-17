@@ -38,7 +38,8 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
 ![JWT Block diagram](https://github.com/amanbhadauria01/Fanpage/blob/master/imgs/JWT%20block%20diagram.png?raw=true)
 #### Pros and Cons of JWT
     1. Must use HTTPS to secure the Authorization headers.
-    2. Validate algorithm name explicitly. Do not completely rely on the algorithm mentioned in the header of JWT.
+    2. Validate algorithm name explicitly. 
+    Do not completely rely on the algorithm mentioned in the header of JWT.
     There are a few known attacks based on the header like algo none  attack, header stripping.
     3. Revoking the session of a user from backend server is difficult. 
     Since a JWT is set to automatically expire. 
