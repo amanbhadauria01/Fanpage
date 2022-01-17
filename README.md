@@ -1,6 +1,6 @@
 # Fanpage
 Link For Online Website - https://fanpageco18.herokuapp.com/
-# Authentication
+## Authentication
  When a user logs in using email and password, verifying the credentials is authentication.
  Simply put authentication is verifying who someone is, i.e. identity of user is checked.
 # Authorization
