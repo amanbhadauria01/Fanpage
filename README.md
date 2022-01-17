@@ -35,5 +35,5 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
     - Authentication server verifies the credentials and issues a jwt signed using secret key.
     - User uses the JWT to access protected resources by passing the JWT in HTTP Authorization header.
     - Resource server then verifies the authenticity of the token using the secret key.
-    ![JWT Block diagram](https://github.com/amanbhadauria01/Fanpage/blob/master/imgs/JWT%20block%20diagram.png)
+    ![JWT Block diagram](https://github.com/amanbhadauria01/Fanpage/blob/master/imgs/JWT%20block%20diagram.png?raw=true)
 
