@@ -17,5 +17,14 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
     JWT header consists of token type and algorithm used for signing and encoding. 
     Algorithms can be HMAC, SHA256, RSA, HS256 or     RS256.
 #### Payload   
-
+    Payload consists of the session data called as claims. 
+    Some of the the standard claims that we can use are : 
+    Issuer(iss) , Subject (sub)  , Issued at (iat) etc.
+    Custom claims can also be included in the claim set
+#### Signature
+    Signature is calculated by encoding the header and payload 
+    using Base64url Encoding and concatenating them with a period separator.  
+    Which is then given to the cryptographic algorithm.
+    `data = base64urlEncode( header ) + “.” + base64urlEncode( payload )
+     signature = HMAC-SHA256( data, secret_salt )`   
 
