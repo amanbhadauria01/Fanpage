@@ -58,9 +58,3 @@ and Resource server decodes and verifies the authenticity of the token using sec
 4. If JWT is persisted on cookies, we need to create HttpOnly cookie. 
        This will restrict third party javascripts from reading jwt token from cookie.
 
-## Fanpage API
-
-## MySQL    
-
-## Nodejs
-
