@@ -28,4 +28,12 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
     i.e.  
     data = base64urlEncode( header ) + “.” + base64urlEncode( payload )
     signature = HMAC-SHA256( data, secret_salt )   
+#### How JWT works ? 
+    Basically the identity provider(IdP) generates a JWT certifying user identity 
+    and Resource server decodes and verifies the authenticity of the token using secret key.
+    - User sign-in using username and password.
+    - Authentication server verifies the credentials and issues a jwt signed using secret key.
+    - User uses the JWT to access protected resources by passing the JWT in HTTP Authorization header.
+    - Resource server then verifies the authenticity of the token using the secret key.
+    ![JWT Block diagram](/imgs/JWT block diagram.png)
 
