@@ -25,6 +25,7 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
     Signature is calculated by encoding the header and payload 
     using Base64url Encoding and concatenating them with a period separator.  
     Which is then given to the cryptographic algorithm.
-    `data = base64urlEncode( header ) + “.” + base64urlEncode( payload )
-     signature = HMAC-SHA256( data, secret_salt )`   
+    i.e.  
+    data = base64urlEncode( header ) + “.” + base64urlEncode( payload )
+    signature = HMAC-SHA256( data, secret_salt )   
 
