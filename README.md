@@ -1,7 +1,7 @@
 # Fanpage
 Link - https://fanpageco18.herokuapp.com/
-### What is Fanpage ? 
-### Why Fanpage ? 
+#### What is Fanpage ? 
+#### Why Fanpage ? 
 
 ## Authentication
 When a user logs in using email and password, verifying the credentials is authentication.
