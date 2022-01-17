@@ -11,10 +11,11 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
  The purpose of using JWT is not to hide data but to ensure the authenticity of the data.   
  JWT is a token based stateless authentication mechanism. Since it is a client-side based stateless session, server doesn’t have to completely rely on a datastore(database) to save session information. 
 ### Structure of JWT
-    - A JSON Web Token consists of 3 parts separated by a period.
-    - header.payload.signature
+    A JSON Web Token consists of 3 parts separated by a period.
+    header.payload.signature
 ### Header 
-       JWT header consists of token type and algorithm used for signing and encoding. Algorithms can be HMAC, SHA256, RSA, HS256 or     RS256.
+    JWT header consists of token type and algorithm used for signing and encoding. 
+    Algorithms can be HMAC, SHA256, RSA, HS256 or     RS256.
 ### Payload   
 
 
