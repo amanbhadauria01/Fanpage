@@ -7,13 +7,13 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
  A users authorities are checked, i.e. checking what accesses does a user have, e.g. 
  whether a user can edit/delete a comment or not? Only author of comment is allowed these accesses.
 ## JWT
- JSON Web Token (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as JSON object.
+-JSON Web Token (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as JSON object.
 
- The purpose of using JWT is not to hide data but to ensure the authenticity of the data. 
- 
- JWT is a token based stateless authentication mechanism. Since it is a client-side based stateless session, server doesn’t have to completely rely on a datastore(database) to save session information. 
+-The purpose of using JWT is not to hide data but to ensure the authenticity of the data. 
 
- JWTs can be either signed, encrypted or both. If a token is signed, but not encrypted, everyone can read its contents, but without the private key, you can't change it. Otherwise, the receiver will notice that the signature won't match anymore.
+-JWT is a token based stateless authentication mechanism. Since it is a client-side based stateless session, server doesn’t have to completely rely on a datastore(database) to save session information. 
+
+-JWTs can be either signed, encrypted or both. If a token is signed, but not encrypted, everyone can read its contents, but without the private key, you can't change it. Otherwise, the receiver will notice that the signature won't match anymore.
 #### Structure of JWT
     A JSON Web Token consists of 3 parts separated by a period.
     header.payload.signature
