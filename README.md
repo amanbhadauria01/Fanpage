@@ -37,8 +37,8 @@ Link For Online Website - https://fanpageco18.herokuapp.com/
     - Resource server then verifies the authenticity of the token using the secret key.
 ![JWT Block diagram](https://github.com/amanbhadauria01/Fanpage/blob/master/imgs/JWT%20block%20diagram.png?raw=true)
 #### Pros and Cons of JWT
-    Must use HTTPS to secure the Authorization headers.
-    Validate algorithm name explicitly. Do not completely rely on the algorithm mentioned in the header of JWT. There are a few known attacks based on the header like algo none  attack, header stripping.
-    Revoking the session of a user from backend server is difficult. Since a JWT is set to automatically expire, If an attacker gets the token before it expires It leads to various exploits. Building a token revocation list on your server to invalidate tokens could be best way to mitigate.
-    If JWT is persisted on cookies, we need to create HttpOnly cookie. This will restrict third party javascripts from reading jwt token from cookie.
+    1. Must use HTTPS to secure the Authorization headers.
+    2. Validate algorithm name explicitly. Do not completely rely on the algorithm mentioned in the header of JWT. There are a few known attacks based on the header like algo none  attack, header stripping.
+    3. Revoking the session of a user from backend server is difficult. Since a JWT is set to automatically expire, If an attacker gets the token before it expires It leads to various exploits. Building a token revocation list on your server to invalidate tokens could be best way to mitigate.
+    4. If JWT is persisted on cookies, we need to create HttpOnly cookie. This will restrict third party javascripts from reading jwt token from cookie.
 
