@@ -14,7 +14,7 @@ whether a user can edit/delete a comment or not? Only author of comment is allow
 - JWTs can be either signed, encrypted or both. If a token is signed, but not encrypted, everyone can read its contents, but without the private key, you can't change it. Otherwise, the receiver will notice that the signature won't match anymore.
 #### Structure of JWT
 A JSON Web Token consists of 3 parts separated by a period.
-header.payload.signature
+`header.payload.signature`
 #### Header 
 JWT header consists of token type and algorithm used for signing and encoding. 
 Algorithms can be HMAC, SHA256, RSA, HS256 or     RS256.
