@@ -12,7 +12,7 @@ whether a user can edit/delete a comment or not? Only author of comment is allow
 - The purpose of using JWT is not to hide data but to ensure the authenticity of the data. 
 - JWT is a token based stateless authentication mechanism. Since it is a client-side based stateless session, server doesn’t have to completely rely on a datastore(database) to save session information. 
 - JWTs can be either signed, encrypted or both. If a token is signed, but not encrypted, everyone can read its contents, but without the private key, you can't change it. Otherwise, the receiver will notice that the signature won't match anymore.
-#### Structure of JWT
+### Structure of JWT
 A JSON Web Token consists of 3 parts separated by a period.
 `header.payload.signature`
 #### Header 
