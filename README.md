@@ -1,5 +1,8 @@
 # Fanpage
-Link For Online Website - https://fanpageco18.herokuapp.com/
+Link - https://fanpageco18.herokuapp.com/
+## What is Fanpage ? 
+## Why Fanpage ? 
+
 ## Authentication
 When a user logs in using email and password, verifying the credentials is authentication.
 Simply put authentication is verifying who someone is, i.e. identity of user is checked.
@@ -50,4 +53,10 @@ and Resource server decodes and verifies the authenticity of the token using sec
        to invalidate tokens could be best way to mitigate.
 4. If JWT is persisted on cookies, we need to create HttpOnly cookie. 
        This will restrict third party javascripts from reading jwt token from cookie.
+
+## Fanpage API
+
+## MySQL    
+
+## Nodejs
 
