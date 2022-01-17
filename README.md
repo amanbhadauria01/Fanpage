@@ -4,7 +4,8 @@ Link - https://fanpageco18.herokuapp.com/
 Fanpage is a Full stack website, which provides details about superheroes.
 #### Why Fanpage ? 
 Fanpage have a discussion forum on each superhero page, where users can talk about
-their favourite superhero.
+their favourite superhero. 
+Users can comment, and also delete or edit their comments.
 
 ## Authentication
 When a user logs in using email and password, verifying the credentials is authentication.
