@@ -13,16 +13,12 @@ const db = mysql.createConnection({
 exports.login = async (req,res)=>{
   try{
      const{email,password} = req.body;
-    //  console.log(email);
-    //  console.log(password);
      if(!email || !password){
         return res.status(400).render('login',{
             message : 'Please provide an email and password'
         });         
      }
      db.query('SELECT * FROM users WHERE email = ?',[email],async(error,results)=>{
-        // console.log(results); 
-        // console.log("came here 2");
         if((results.length===0) || !results || !(await bcrypt.compare(password,results[0].password))){
             //  console.log("came here");
              return res.status(401).render('login',{
@@ -34,7 +30,6 @@ exports.login = async (req,res)=>{
              const token = jwt.sign({id : id},process.env.JWT_SECRET,{
                  expiresIn : process.env.JWT_EXPIRES_IN
              });
-            //  console.log("the token is " + token);
              const cookieOptions = {
                  expires : new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000),
                  httpOnly: true
@@ -68,7 +63,6 @@ exports.register = (req,res)=>{
             });            
         }
         let hashedPassword = await bcrypt.hash(password,8);
-        // console.log(hashedPassword);
         db.query('INSERT INTO users SET ?',{name : name, email : email,password : hashedPassword},(err,results)=>{
              if(err){
                  console.log(err);
@@ -80,17 +74,14 @@ exports.register = (req,res)=>{
              }
         })
     });
-    // res.send("Form submitted");
 }
 
 
 exports.isLoggedIn = async(req,res,next)=>{
-    // console.log(req.cookies);
     if(req.cookies.jwt){
         try{
             // verifying the token
             const decoded = await promisify(jwt.verify)(req.cookies.jwt,process.env.JWT_SECRET);
-            // console.log(decoded);    
             // check if the use still exists
             db.query('SELECT * FROM users WHERE id = ? ',[decoded.id],(error,result)=>{
                 //  console.log(result);
